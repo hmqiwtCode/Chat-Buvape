@@ -50,6 +50,45 @@ Add user<br>
 <img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/add_user.PNG"><br>
 
 
+<h1>Phone App</h1>
+
+Phone Login<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/phone_login.PNG"><br>
+
+
+Phone Reg<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/phone_reg.PNG"><br>
+
+
+Scan Friend<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/scan_user.PNG"><br>
+
+
+Scan login web like Zalo<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/scan_success.PNG"><br>
+
+
+Item Chat<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/item_chat.PNG"><br>
+
+
+Chat Message<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/chat_message.PNG"><br>
+
+
+Profile<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/profile.PNG"><br>
+
+Friends On Phone<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/friends_phone.PNG"><br>
+
+
+Logout<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/logout.PNG"><br>
+
+
+
+
 
 
 
