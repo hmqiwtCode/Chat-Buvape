@@ -36,11 +36,19 @@ Chat<br>
 Chat group<br>
 <img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/chat_group.PNG"><br>
 
-Create group<br>
-<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/create_group.PNG"><br>
+Friend_list<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/friend_list.PNG"><br>
 
-Create group<br>
-<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/create_group.PNG"><br>
+Admin<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/admin.PNG"><br>
+
+
+Manage user<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/manage_user.PNG"><br>
+
+Add user<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/add_user.PNG"><br>
+
 
 
 
