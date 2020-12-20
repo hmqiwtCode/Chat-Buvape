@@ -1,6 +1,8 @@
 # Chat-Buvape
 Chat application similar to Zalo <br>
-Demo: <a href="http://chatbuvape.herokuapp.com/" />
+Demo: <a href="http://chatbuvape.herokuapp.com/" /> <br>
+<p> Phone login: 84838405444 </p>
+<p> Password: 123456789 </p>
 Login <br>
 <img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/index.PNG"><br>
 
