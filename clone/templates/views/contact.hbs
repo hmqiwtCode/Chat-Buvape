@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BUVAPE HOME</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"/> --}}
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+
+    <style>
+        .row {
+            flex-wrap: wrap;
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-top: 20px;
+        }
+        .hihi{
+            border-width:1px;
+            margin: 5px;
+            text-align: center;
+            border-style: dashed;
+            color: #3298dc;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerf">
+
+        <div class="chat">
+            <div class="sidebar_menu_content">
+                <a href=""><img class="ic_owner" src="assets/img/user1-avatar.png" alt="member1-avatar"></a>
+                <a href="home"><i class="fa fa-fw fa-telegram"></i></a>
+                <a class="active_current" href="contact"><i class="fa fa-fw fa-address-book-o"></i></a>
+                <a href="#"><i class="fa fa-fw fa-cogs"></i></a>
+
+            </div>
+
+            {{!-- <div class="sidebar"> --}}
+            <div class="main-body" style="width: -webkit-fill-available;overflow-y: auto;">
+                <div class="page-wrapper">
+                    <div class="row">
+                        <div class="col-sm-4 ">
+                            <div class="hihi">
+                                <h5 style="color: #3298dc; padding-top:5px">DANH SACH CONTACT</h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <!-- [ Breadcrumbs & Pagination ] start -->
+                        {{#each listUserContact}}
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-header ">
+                                    <h5>{{firstname}} {{lastname}}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <center>
+                                        <img class="rounded-circle" style="width:70px;"
+                                            src="https://avatar.oxro.io/avatar.svg?name={{firstname}} {{lastname}}&caps=1"
+                                            alt="activity-user">
+
+                                        <p style="margin-top: 10px;">Name: <span style="color:#000">{{firstname}}
+                                                {{lastname}}</span></p>
+                                        <p style="margin-top: 10px;">Phone:<span style="color:#000">+ {{phone}}</span>
+                                        </p>
+                                        <span class="tag" style="background-color: #f14668;color: #fff;"><i
+                                                class="feather icon-trash"></i>Delete</span>
+                                        <span class="tag" style="background-color: #20c997;color: #fff;"><i
+                                                class="feather icon-twitter"></i>Message</span>
+                                        <span class="tag" style="background-color: #3298dc;color: #fff;"><i
+                                                class="feather icon-align-left"></i>Detail</span>
+                                    </center>
+
+
+                                </div>
+                            </div>
+                            
+
+
+                            
+                        </div>
+                        {{/each}}
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+
+</html>

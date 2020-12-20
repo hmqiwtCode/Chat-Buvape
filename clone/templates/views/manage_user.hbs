@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ADMIN USER</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+
+</head>
+
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <div class="b-bg">
+                        <i class="feather icon-trending-up"></i>
+                    </div>
+                    <span class="b-title">BUVAPE</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>ADMIn</label>
+                    </li>
+                    <li data-username="" class="nav-item">
+                        <a href="/dashboard" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+
+                    <li data-username="" class="nav-item pcoded-hasmenu active pcoded-trigger">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-box"></i></span><span class="pcoded-mtext">Manage</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class="active"><a href="/users" class="">Users</a></li>
+                           
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-trending-up"></i>
+                </div>
+                <span class="b-title">BUVAPE</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header" href="javascript:">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i
+                            class="feather icon-maximize"></i></a></li>
+                <li class="nav-item">
+                    <div class="main-search">
+                        <div class="input-group">
+                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                            <a href="javascript:" class="input-group-append search-close">
+                                <i class="feather icon-x input-group-text"></i>
+                            </a>
+                            <span class="input-group-append search-btn btn btn-primary">
+                                <i class="feather icon-search input-group-text"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="https://avatar.oxro.io/avatar.svg?name={{currentUser.user.firstname}} {{currentUser.user.lastname}}&caps=1"
+                                    class="img-radius" alt="User-Profile-Image">
+                                <span>{{currentUser.user.firstname}} {{currentUser.user.lastname}}</span>
+                                <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i>
+                                        Profile</a></li>
+                                <li><a href="/home" class="dropdown-item"><i class="feather icon-mail"></i> My
+                                        Messages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">User</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/dashboard"><i
+                                                    class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="/users">User</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>List Users</h5>
+                                        </div>
+                                        <div class="card-block table-border-style">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Avatar</th>
+                                                            <th>First Name</th>
+                                                            <th>Last Name</th>
+                                                            <th>DOB</th>
+                                                            <th>Email</th>
+                                                            <th>Phone</th>
+                                                            <th>Created At</th>
+                                                            <th>Active</th>
+                                                            <th>Type</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {{#each userPage}}
+                                                        <tr>
+                                                            <th scope="row">{{@index}}</th>
+                                                            <td><img class="rounded-circle" style="width:40px;"
+                                                                    src="https://avatar.oxro.io/avatar.svg?name={{firstname}} {{lastname}}&caps=1"
+                                                                    alt="activity-user"></td>
+                                                            <td>{{firstname}}</td>
+                                                            <td>{{lastname}}</td>
+                                                            <td>{{moment dob format="DD-MM-YYYY"}}</td>
+                                                            <td>{{email}}</td>
+                                                            <td>+{{phone}}</td>
+                                                            <td>{{moment createdAt format="DD-MM-YYYY"}}</td>
+                                                            {{#ifCond active  '===' true}}
+                                                                <td><span class="tag" style="background-color: #00d1b2;color: #fff;">True</span></td>
+                                                            {{else}}
+                                                                <td><span class="tag" style="background-color: #f14668;color: #fff;">False</span></td>
+                                                            {{/ifCond}}
+
+
+                                                            {{#ifCond type_account  '===' 0}}
+                                                                <td><span class="tag" style="background-color: #00d1b2;color: #fff;">User</span></td>
+                                                            {{else}}
+                                                                <td><span class="tag" style="background-color: #f14668;color: #fff;">Admin</span></td>
+                                                            {{/ifCond}}
+
+
+                                                            {{#ifCond type_account  '===' 0}}
+                                                                <td><span class="tag" onclick="deleteUser(this,{{id}})" style="background-color: #f14668;color: #fff;"><i class="feather icon-trash"></i>Delete</span>
+                                                            {{else}}
+                                                                <td>
+                                                            {{/ifCond}}
+
+                                                            <span class="tag" onclick="detail(this,{{id}})" style="background-color: #3298dc;color: #fff;"><i class="feather icon-align-left"></i>Detail</span>
+
+                                                            {{#ifCond active  '===' true}}
+                                                                {{#ifCond type_account  '===' 0}}
+                                                                    <span class="tag" style="background-color: #ffdd57;color: #fff;" onclick="deactivate(this,{{id}})"><i class="feather icon-minus"></i>Deactive</span>
+                                                                {{else}}
+
+                                                                 {{/ifCond}}
+                                                            {{else}}
+                                                                <span class="tag" style="background-color: #00d1b2;color: #fff;" onclick="activate(this,{{id}})"><i class="feather icon-plus"></i>Active</span>
+                                                            {{/ifCond}}
+                                                            
+                                                            </td>
+                                                        </tr>
+                                                        {{/each}}
+                                                       
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <nav class="ml-auto" style="margin-right: 1rem ;">
+                                            <ul class="pagination">
+                                                {{#paginate pagination type="first"}}
+                                                <li {{#if disabled}}class="disabled page-item" {{/if}}><a
+                                                        href="?p={{n}}" class="page-link">First</a></li>
+                                                {{/paginate}}
+                                                {{#paginate pagination type="previous"}}
+                                                <li {{#if disabled}}class="disabled page-item" {{/if}}><a
+                                                        class="page-link" href="?p={{n}}">«</a>
+                                                </li>
+                                                {{/paginate}}
+                                                {{#paginate pagination type="middle" limit="4"}}
+                                                <li {{#if active}}class="active page-item" {{/if}}><a class="page-link"
+                                                        href="?p={{n}}">{{n}}</a>
+                                                </li>
+                                                {{/paginate}}
+                                                {{#paginate pagination type="next"}}
+                                                <li {{#if disabled}}class="disabled page-item" {{/if}}><a
+                                                        class="page-link" href="?p={{n}}">»</a>
+                                                </li>
+                                                {{/paginate}}
+                                                {{#paginate pagination type="last"}}
+                                                <li {{#if disabled}}class="disabled page-item" {{/if}}><a
+                                                        class="page-link" href="?p={{n}}">Last</a>
+                                                </li>
+                                                {{/paginate}}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Add New User</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row" id="detailForm">
+                                                <h5>Detail</h5>
+                                                <hr>
+                                                <div class="col-md-12">
+                                                    <input class="mb-3 form-control form-control-lg" type="text" placeholder="">
+                                                    <input class="mb-3 form-control" type="text" placeholder="">
+                                                    <input class="mb-3 form-control form-control-sm" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                            <form action="" id="reset_form">
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="email">Email address</label>
+                                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="password_exp">Password</label>
+                                                            <input type="password" class="form-control" id="password_exp" placeholder="Password">
+                                                        </div>
+                                                        
+                                                        <div class="form-group">
+                                                            <label for="firstname_exp">First name</label>
+                                                            <input type="text" class="form-control" id="firstname_exp" placeholder="First Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="lastname_exp">Last name</label>
+                                                            <input type="text" class="form-control" id="lastname_exp" placeholder="Last Name">
+                                                        </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Phone</label>
+                                                            <input type="text" id="phone_exp" class="form-control" minlength="11" maxlength="11" placeholder="84838405444">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>DOB</label>
+                                                            <input type="date" id="dob_exp" class="form-control" placeholder="dob">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="type_exp">Type</label>
+                                                            <select class="form-control" id="type_exp">
+                                                                <option>Admin</option>
+                                                                <option>User</option>
+                                                            </select>
+                                                        </div>
+                                                </div>
+                                               
+                                            </div>
+                                            </form>
+                                            <button id="add" class="btn btn-primary"><i class="feather icon-plus"></i>Add</button>
+                                            <button id="clear" class="btn btn-warning"><i class="feather icon-trash"></i>Clear</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+    <!-- Required Js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/vendor-all.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/manage_user.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BUVAPE HOME</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"/> --}}
+    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <style>
+        .swiper-container {
+            width: 55%;
+            height: 55%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+
+        .swiper-slide .title {
+            bottom: 20px;
+            left: 20px;
+            float: left;
+            position: absolute;
+            width: 100%;
+            z-index: 9999;
+            font-weight: 600;
+            font-size: 18px;
+            margin: 20px 0 50px;
+            color: #0068ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="chat">
+            <div class="sidebar_menu_content">
+                <a href=""><img class="ic_owner" src="assets/img/user1-avatar.png" alt="member1-avatar"></a>
+                <a class="active_current" href="home"><i class="fa fa-fw fa-telegram"></i></a>
+                <a href="contact"><i class="fa fa-fw fa-address-book-o"></i></a>
+                <a href="#"><i class="fa fa-fw fa-cogs"></i></a>
+
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar__header">
+                    <img class="sidebar__header-burger icon" src="assets/icons/burger.svg" alt="menu">
+                    <input class="sidebar__header-input" placeholder="Search" id="friend_search" />
+                </div>
+                <div class="sidebar__dialogs" id="chat_item_bar">
+                    <div class="dialog-item dialog-item--selected">
+                        <img class="dialog-item__avatar"
+                            src="https://lh3.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=s180-rw"
+                            alt="group1-avatar" />
+                        <div class="dialog-item__info">
+                            <div class="dialog-item__info-top">
+                                <img class="group-icon" src="assets/icons/group.svg" alt="group icon">
+                                <b class="fullname">BUVAPE</b>
+                                <span class="message-time">14:55</span>
+                            </div>
+                            <div class="dialog-item__info-bottom">
+                                <p class="message-text">Demo message Buvape</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{!-- {{d}} --}}
+                <div class="sidebar__dialogs" id="friend_item_bar">
+                    <img class="" src="assets/img/back.svg" width="15px" height="15px" style="margin:5px 5px 0 10px"
+                        alt="group1-avatar" />
+
+
+                    <div class="dialog-item" id="friendss">
+                        <img class="dialog-item__avatar"
+                            src="https://avatar.oxro.io/avatar.svg?name=Huỳnh Minh Quý&caps=1"
+                            alt="group1-avatar" />
+                        <div class="dialog-item__info">
+                            <div class="dialog-item__info-top">
+                                <p class="fullname">Nguyễn Hai Lắm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="kkdkdkd">
+
+                    </div>
+
+                    <script id="headermbh" type="text/x-handlebars-template">
+                        <p> div {{headerTitle}} div</p>  
+                        <p> Today is {{weekDay}}</p>  
+                    </script>
+
+
+                </div>
+
+                {{!-- {{d}} --}}
+
+            </div>
+
+            <div class="dialog">
+                <p style="font-size: 22px;text-align: center;color: rgb(61, 60, 60);margin-top:50px">Chào mừng đến với
+                    <strong>BUVAPE PC</strong></p>
+                <p style="text-align: center;margin-top:20px">Khám phá những tiện ích hỗ trợ làm việc và trò chuyện cùng
+                    người thân, bạn bè được tối ưu hoá cho máy tính của bạn.</p>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-02.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_1">Chat nhóm với đồng nghiệp</div>
+                        </div>
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-01.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_2">Giải quyết công việc hiệu quả hơn</div>
+                        </div>
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-0.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_2">Giải quyết và làm việc hiệu quả</div>
+                        </div>
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-04.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_2">Trải nghiệm xuyên suốt</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Dialog -->
+            <div class="dialog" id="chat_content" style="display: none;">
+                <div class="dialog__header">
+                    <div class="dialog__header-info">
+                        <b class="dialog__header-info-name">
+                            BUVAPE
+                        </b>
+                        <span class="dialog__header-info-members">
+                            5 members
+                        </span>
+                    </div>
+                    <div class="dialog__header-buttons">
+                        <img class="header-button icon" src="assets/icons/search.svg" alt="search">
+                        <img class="header-button sidebar-icon button--active icon" src="assets/icons/sidebar.svg"
+                            alt="show/hide sidebar">
+                        <img class="header-button icon" src="assets/icons/dots.svg" alt="options">
+                    </div>
+                </div>
+                <div class="dialog__messages">
+                    <div class="date">October 20</div>
+                    <div class="message message--own">
+                        <img class="message__avatar" src="assets/img/user1-avatar.png" alt="member1-avatar">
+                        <div class="message__info">
+                            <div class="message__bubble">
+                                <div class="message__author">
+                                    HMQ
+                                </div>
+                                <div class="message__content">
+                                    Test test message
+                                </div>
+                                <div class="message__time">
+                                    13:08
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <img class="message__avatar" src="assets/img/member4-avatar.jpg" alt="member4-avatar">
+                        <div class="message__info">
+                            <div class="message__bubble">
+                                <div class="message__author">
+                                    Nhan
+                                </div>
+                                <div class="message__content">
+                                    Ngon ngon
+                                </div>
+                                <div class="message__time">
+                                    13:10
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <img class="message__avatar" src="assets/img/member3-avatar.jpg" alt="member3-avatar">
+                        <div class="message__info">
+                            <div class="message__bubble">
+                                <div class="message__author">
+                                    Hau
+                                </div>
+                                <div class="message__content">
+                                    Ngon ngon, qua ngon
+                                </div>
+                                <div class="message__time">
+                                    14:50
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <img class="message__avatar" src="assets/img/member2-avatar.jpg" alt="member2-avatar">
+                        <div class="message__info">
+                            <div class="message__bubble">
+                                <div class="message__author">
+                                    Hai
+                                </div>
+                                <div class="message__content">
+                                    Vipvip
+                                </div>
+                                <div class="message__time">
+                                    14:55
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="message">
+                        <img class="message__avatar" src="https://uifaces.co/our-content/donated/rSuiu_Hr.jpg"
+                            alt="member2-avatar">
+                        <div class="message__info">
+                            <div class="message__bubble">
+                                <div class="message__author">
+                                    Tho
+                                </div>
+                                <div class="message__content">
+                                    Dinh dinh
+                                </div>
+                                <div class="message__time">
+                                    14:55
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="dialog__input">
+                    <img class="icon icon--big" src="assets/icons/clip.svg" alt="attach">
+                    <input type="text" placeholder="Write a message...">
+                    <img class="icon icon--big" src="assets/icons/smile.svg" alt="smile">
+
+                    <img class="icon icon--big" src="assets/icons/mic.svg" alt="record">
+                </div>
+            </div>
+
+            <!-- Dialog info -->
+            <div class="dialog-info" id="chat_infor" style="display: none;">
+                <div class="dialog-info__header">
+                    <b>Group Info</b>
+                    <img class="icon icon--small" src="assets/icons/close.svg" alt="close">
+                </div>
+                <div class="dialog-info__about">
+                    <div class="about-top">
+                        <img class="about-top__avatar"
+                            src="https://lh3.googleusercontent.com/ZU9cSsyIJZo6Oy7HTHiEPwZg0m2Crep-d5ZrfajqtsH-qgUXSqKpNA2FpPDTn-7qA5Q=s180-rw"
+                            alt="group1-avatar" />
+                        <div class="about-top__data">
+                            <b>BUVAPE</b>
+                            <span>5 members, 1 online</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="about-description">
+                        <img class="about-description__icon" src="assets/icons/info.svg" alt="info">
+                        <p class="about-description__data">
+                            Be polite and respect each other.
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="about-description">
+                        <img class="about-description__icon" src="assets/icons/camera.svg" alt="info">
+                        <p class="about-description__data">
+                            <label for="imageUpload" class="btn btn-primary btn-block btn-outlined">Set
+                                background</label>
+                            <input type="file" id="imageUpload" accept="image/*" style="display: none">
+                        </p>
+                    </div>
+
+
+                    <hr>
+                    <div class="about-notifications">
+                        <div class="about-notifications__left">
+                            <img class="about-notifications__left-icon" src="assets/icons/notifications.svg"
+                                alt="notifications">
+                            <p class="about-notifications__left-data">
+                                Notifications
+                            </p>
+                        </div>
+
+
+                        <div class="about-notifications__right">
+                            <input id="checkbox1" type="checkbox" checked>
+                            <label for="checkbox1"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-info__attachments">
+                    <div class="dialog-info__links">
+                        <img class="dialog-info__links-icon" src="assets/icons/link.svg" alt="links">
+                        <p class="dialog-info__links-text">1 shared link</p>
+                    </div>
+                </div>
+
+
+                <div class="dialog-info__members">
+                    <div class="dialog-info__members-header">
+                        <div class="dialog-info__members-header-left">
+                            <img src="assets/icons/group.svg" alt="group">
+                            <p>5 members</p>
+                        </div>
+                        <div class="dialog-info__members-header-right">
+                            <img class="icon" src="assets/icons/search.svg" alt="search">
+                            <img class="icon" src="assets/icons/add-user.svg" alt="add">
+                        </div>
+                    </div>
+                    <div class="dialog-info__members-list">
+                        <div class="member member--online">
+                            <img class="member__avatar" src="assets/img/user1-avatar.png" alt="member1-avatar">
+                            <div class="member__info">
+                                <b>HMQ</b>
+                                <span>online</span>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <img class="member__avatar" src="assets/img/member2-avatar.jpg" alt="member2-avatar">
+                            <div class="member__info">
+                                <b>Hai</b>
+                                <span>last seen 17 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <img class="member__avatar" src="assets/img/member3-avatar.jpg" alt="member3-avatar">
+                            <div class="member__info">
+                                <b>Hau</b>
+                                <span>last seen 18 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <img class="member__avatar" src="assets/img/member4-avatar.jpg" alt="member4-avatar">
+                            <div class="member__info">
+                                <b>Nhan</b>
+                                <span>last seen 19 minutes ago</span>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <img class="member__avatar" src="https://uifaces.co/our-content/donated/rSuiu_Hr.jpg"
+                                alt="member4-avatar">
+                            <div class="member__info">
+                                <b>Tho</b>
+                                <span>last seen 20 minutes ago</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://swiperjs.com/package/swiper-bundle.min.js"></script>
+    
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 1500,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    </script>
+
+    <script>
+        onTransitionStart: function () {
+            $(".swiper-slide div.title").hide();
+        },
+        onTransitionEnd: function (mySwiper) {
+            $("#title_" + mySwiper.activeIndex).show("slow");
+        }
+    </script>
+
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

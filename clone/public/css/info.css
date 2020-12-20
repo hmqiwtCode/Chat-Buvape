@@ -1,0 +1,186 @@
+body{
+    background-color: #dfe5ec;
+    margin: 0;
+    overflow: hidden;
+    font-family:sans-serif;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+}
+
+
+input,select,button{
+    outline: none;
+}
+.background-color-blue{
+    background-color: #5682a3;
+    height: 231px;
+}
+.login-page{
+    margin: -150px auto 60px;
+    border: 0;
+    padding: 0;
+    max-width: 404px;
+    height: 460px;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.top-login-page{
+    background-color: #5682a3;
+    height: 75px;
+    display: block;
+}
+.login-form{
+    height: 400px;
+}
+.in-login{
+    padding: 20px 20px;
+}
+.p1{
+    color: #999;
+    font-size: 13px;
+    line-height: 160%;
+}
+.country{
+    color: #999;
+    font-size: 13px;
+    display: block;
+    font-weight: 400px;
+}
+#country{
+    border: 1px solid white;
+    border-bottom: 1px solid #999;
+    width: 100%;
+    margin: 5px 0 10px;
+}
+.inputp{
+    display: inline-block;
+    width: 170px;
+    border: 1px solid white;
+    border-bottom: 1px solid #999;
+    margin-top: 20px;
+}
+.inputc{
+    color: #000;
+    display: inline-block;
+    font-size: 13px;
+    padding: 3px 0;
+    width: 45px;
+    border: 1px solid white;
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.label1{
+    width: 40px;
+    display: inline-block;
+}
+.label3{
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    top: 2px;
+}
+.labelc{
+    color: #999;
+    font-size: 13px;
+    display: block;
+    font-weight: 400;
+    margin: 10px 0 5px;
+    margin-right: 10px;
+}
+.bottom-login-page{
+    background-color: #dfe5ec;
+    height: 42px;
+}
+.introduction{
+    color: #84a2bc;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 25px;
+    line-height: 16px;
+}
+.link-learn-more{
+    color: #84a2bc;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+.logo-top-page{
+    line-height: 30px;
+    padding: 23px 15px 22px;
+    display: inline-block;
+    text-decoration: none;
+}
+.icon-top-page{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    background-image: url(https://web.telegram.org/img/icons/General.png);
+    display: inline-block;
+    background-position: -5px -10px;
+    background-repeat: no-repeat;
+    vertical-align: top;
+    
+}
+
+.bv{
+    color: #dfe5ec;
+    text-decoration: none;
+}
+.icon-top-page-title{
+    width: 62px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://web.telegram.org/img/Telegram.svg);
+    margin-top: 1px;
+    background-position: 0 0;
+    line-height: 30px;
+}
+.next-top-login-page{
+    color:white;
+    padding: 12px 12px 12px;
+    display: inline-block;
+    font-size: 13px;
+    text-decoration: none;
+    background: #5682a3;
+    float: right;
+    margin-top: 5px;
+
+}
+.text-next-top-login-page{
+    font-weight: bold;
+}
+.code_number{
+    padding: 10px;
+    font-size: 2rem;
+    color: #5682a3;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid white;
+    border-bottom: 1px solid #999;
+}
+
+.email{
+    font-size: 0.8rem;
+    color: #5682a3;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid white;
+    border-bottom: 1px solid #999;
+}
+.icon-arrow-top-login-page{
+    width: 7px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+    margin-left: 5px;
+    margin-top: -1px;
+    background-image: url(https://web.telegram.org/img/icons/General.png);
+    background-position: -18px -50px;
+}

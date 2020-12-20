@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BUVAPE HOME</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://swiperjs.com/package/swiper-bundle.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="chat">
+            <div class="sidebar_menu_content">
+                <a id="btnUser" href="javascript:void(0)"><img class="ic_owner" src="assets/img/user1-avatar.png" alt="member1-avatar"></a>
+                <a class="active_current" href="home"><i class="fa fa-fw fa-telegram"></i></a>
+                <a href="contact"><i class="fa fa-fw fa-address-book-o"></i></a>
+                <a id="logout" href="#"><i class="fa fa-fw fa-cogs"></i></a>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar__header">
+                    <input class="sidebar__header-input" placeholder="Search" id="friend_search" />
+                    <img class="sidebar__header-burger icon" id="create_group" src="assets/icons/add_group.svg" alt="menu">
+                    <img class="sidebar__header-burger icon" id="add_new_friend" src="assets/icons/add-friend.svg" alt="menu">
+                </div>
+                <div class="sidebar__dialogs" id="chat_item_bar">
+
+                    <!-- chat item  -->
+
+
+                </div>
+
+                <div class="sidebar__dialogs" id="friend_item_bar" style="display: none;">
+                    <div id="friends_search_fine">
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="dialog" id="gioithieu">
+                <p style="font-size: 22px;text-align: center;color: rgb(61, 60, 60);margin-top:50px">Chào mừng đến với
+                    <strong>BUVAPE PC</strong></p>
+                <p style="text-align: center;margin-top:20px">Khám phá những tiện ích hỗ trợ làm việc và trò chuyện cùng
+                    người thân, bạn bè được tối ưu hoá cho máy tính của bạn.</p>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-02.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_1">Chat nhóm với đồng nghiệp</div>
+                        </div>
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-01.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_2">Giải quyết công việc hiệu quả hơn</div>
+                        </div>
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-0.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_2">Giải quyết và làm việc hiệu quả</div>
+                        </div>
+                        <div class="swiper-slide"><img
+                                src="https://zalo-chat-static.zadn.vn/v1/inapp-welcome-screen-04.jpg" width="60%"
+                                height="60%">
+                            <div class="title" id="title_2">Trải nghiệm xuyên suốt</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!-- Dialog -->
+            <div class="dialog" id="chat_content" style="display: none;">
+                <div class="dialog__header" id="dialog_header_name">
+
+                </div>
+                <div class="dialog__messages" id="content_user_chat">
+
+
+
+
+                </div>
+                <div class="dialog__input">
+                    <img class="icon icon--big" src="assets/icons/clip.svg" alt="attach">
+                    <input id="textMessage" type="text" placeholder="Write a message...">
+                    <img class="icon icon--big" src="assets/icons/smile.svg" alt="smile" id="emoji-button">
+
+                    <img class="icon icon--big" src="assets/icons/mic.svg" alt="record">
+                    <img style="display:none;" id="sendMessageEnter" src="" alt="send">
+                </div>
+            </div>
+
+            <!-- Dialog info -->
+            <div class="dialog-info" id="chat_infor" style="display: none;">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="dashclass">Tạo nhóm</p>
+            <input type="text" class="inputGroup" placeholder="Tên nhóm..." id="tennhom">
+            <p style="margin-top:10px" class="dashclass">Thêm bạn bè vào nhóm</p>
+            <div id="list_friend_add" style="overflow-y: scroll;height: 200px;margin-top:10px;text-align: -webkit-center;">        
+            </div>
+            <input class="btnGr" type="button" value="Tạo nhóm" onclick="getName()">
+        </div>
+    </div>
+
+
+    <div id="modal_friend" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="dashclass">Thêm bạn bè</p>
+            <input type="number" class="inputGroup" placeholder="Số điện thoại(84)" id="sdt_friend" autocomplete="off">   
+            <input class="btnGr" type="button" value="Thêm bạn bè" onclick="addFriend()">
+        </div>
+    </div>
+
+    <div id="modal_user" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="dialog-info__about about-description" style="position:relative">
+                <img class="icon-size about-description__icon profile-pic" src="assets/icons/camera.svg" alt="info">
+                <img id="btnFile" src="https://zalo-chat-static.zadn.vn/v1/chat_setting_avatar_icon_edit.png" style="position: absolute; bottom: 5px; cursor: pointer; right: 155px">
+                <p class="about-description__data">
+                    <input type="file" id="imageUser" class="file-upload" accept="image/*" style="display: none">
+                </p>
+            </div>
+            <input type="text" class="inputGroup" placeholder="Name" autocomplete="off" id="name_user" >
+
+            <input class="btnGr" type="button" value="Lưu" onclick="infoUser()">
+        </div>
+    </div>
+
+
+
+    
+    <script id="headermbh" type="text/x-handlebars-template">
+        {{#each objects}}
+            <div name="{{firstname}} {{lastname}}" class="dialog-item" onclick="chatMessage(this,{{id}})">
+                <img class="dialog-item__avatar"
+                    src="https://avatar.oxro.io/avatar.svg?name={{firstname}} {{lastname}}&caps=1"
+                    alt="group1-avatar" />
+                <div class="dialog-item__info">
+                    <div class="dialog-item__info-top">
+                        <p class="fullname">{{firstname}} {{lastname}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+
+    </script>
+
+    <script id="friend_group" type="text/x-handlebars-template">
+        {{#each objects}}
+            <div class="card_friend_badge">
+                <p style="float: left;">{{firstname}} {{lastname}}</p>
+                <input type="checkbox" style="float: right;" name="friend" value="{{firstname}} {{lastname}}" id="{{id}}">
+            </div>
+        {{/each}}
+
+    </script>
+
+    <script id="chatchatco_retrieve" type="text/x-handlebars-template">
+        {{#each objects}}
+        <div class="date">October 20</div>
+        {{#ifCond id  '===' current}}
+        
+        <div class="message message--own">
+            <img class="message__avatar" src="assets/img/user1-avatar.png" alt="member1-avatar">
+            <div class="message__info">
+                <div class="message__bubble">
+                    <div class="message__author">
+                        {{nameS}}
+                    </div>
+                    <div class="message__content">
+                            {{message}}
+                    </div>
+                    <div class="message__time">
+                        {{time}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+
+            <div class="message message">
+                <img class="message__avatar" src="assets/img/user1-avatar.png" alt="member1-avatar">
+                <div class="message__info">
+                    <div class="message__bubble">
+                        <div class="message__author">
+                            {{nameR}}
+                        </div>
+                        <div class="message__content">
+                                {{message}}
+                        </div>
+                        <div class="message__time">
+                            {{time}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/ifCond}}
+        {{/each}}
+
+    </script>
+
+
+
+    <script id="chatchatco_realtime" type="text/x-handlebars-template">
+        <div class="date">{{date}}</div>
+        <div class="message message--own">
+            <img class="message__avatar" src="{{avatar}}" alt="member1-avatar">
+            <div class="message__info">
+                <div class="message__bubble">
+                    <div class="message__author">
+                        {{user}}
+                    </div>
+                    <div class="message__content">
+                        {{message}}
+                    </div>
+                    <div class="message__time">
+                        {{time}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+
+    <script id="chatchatco_realtime_rv" type="text/x-handlebars-template">
+        <div class="message">
+            <img class="message__avatar" src="{{avatar}}" alt="member1-avatar">
+            <div class="message__info">
+                <div class="message__bubble">
+                    <div class="message__author">
+                        {{user}}
+                    </div>
+                    <div class="message__content">
+                        {{message}}
+                    </div>
+                    <div class="message__time">
+                        {{time}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+    <script id="name_dialog_header" type="text/x-handlebars-template">
+        <div class="dialog__header-info">
+            <b class="dialog__header-info-name">
+                {{name}}
+            </b>
+            <!-- <span class="dialog__header-info-members">
+                5 members
+            </span> -->
+        </div>
+        <div class="dialog__header-buttons">
+            <img class="header-button icon" src="assets/icons/search.svg" alt="search">
+            <img class="header-button sidebar-icon button--active icon" src="assets/icons/sidebar.svg"
+                alt="show/hide sidebar">
+            <img class="header-button icon" src="assets/icons/dots.svg" alt="options">
+        </div>
+    </script>
+
+
+    <script id="item_chat_now" type="text/x-handlebars-template">
+        {{#each objects}}
+    <div class="dialog-item dialog-item"  onclick="displayChat(this,'{{maso}}')">
+            <img class="dialog-item__avatar"
+                src="https://avatar.oxro.io/avatar.svg?name={{messages.receiverName}}&caps=1"
+                alt="{{messages.receiverName}}" />
+            <div class="dialog-item__info">
+                <div class="dialog-item__info-top">
+                    <img class="group-icon" src="assets/icons/group.svg" alt="group icon">
+                    <p class="fullname">{{messages.receiverName}}</p>
+                    <span class="message-time">{{messages.time}}</span>
+                </div>
+                <div class="dialog-item__info-bottom">
+                    <p class="message-text">{{messages.message}}</p>
+
+                    {{#ifCond messages.id  '!==' messages.current}}
+                        {{#ifCond un_read  '>' 0}}
+                        <span class="unread-count">{{un_read}}</span>
+                        {{/ifCond}}
+                    {{/ifCond}}
+                </div>
+            </div>
+            {{#ifCond receiver  '===' messages.current}}
+                <p style="display: none;">{{sender}}</p>
+            {{else}}
+                <p style="display: none;">{{receiver}}</p>
+            {{/ifCond}}
+        </div>
+        {{/each}}
+    </script>
+
+
+    <script id="chat_info_type_two" type="text/x-handlebars-template">
+        <div class="dialog-info__header">
+            <b>Chat Info</b>
+            <img class="icon icon--small" src="assets/icons/close.svg" alt="close">
+        </div>
+        <div class="dialog-info__about">
+            <div class="about-top">
+                <img class="about-top__avatar"
+                    src="https://avatar.oxro.io/avatar.svg?name={{name}}"
+                    alt="group1-avatar" />
+                <div class="about-top__data">
+                    <b>{{name}}</b>
+                </div>
+            </div>
+            <hr>
+            <div class="about-description">
+                <img class="about-description__icon" src="assets/icons/info.svg" alt="info">
+                <p class="about-description__data">
+                    Be polite and respect each other.
+                </p>
+            </div>
+            <hr>
+            <div class="about-description">
+                <img class="about-description__icon" src="assets/icons/camera.svg" alt="info">
+                <p class="about-description__data">
+                    <label for="imageUpload" class="btn btn-primary btn-block btn-outlined">Set
+                        background</label>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none">
+                </p>
+            </div>
+
+
+            <hr>
+            <div class="about-notifications">
+                <div class="about-notifications__left">
+                    <img class="about-notifications__left-icon" src="assets/icons/notifications.svg"
+                        alt="notifications">
+                    <p class="about-notifications__left-data">
+                        Notifications
+                    </p>
+                </div>
+
+
+                <div class="about-notifications__right">
+                    <input id="checkbox1" type="checkbox" checked>
+                    <label for="checkbox1"></label>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-info__attachments">
+            <div class="dialog-info__links">
+                <img class="dialog-info__links-icon" src="assets/icons/link.svg" alt="links">
+                <p class="dialog-info__links-text">0 shared link</p>
+            </div>
+        </div>
+
+
+        <div class="dialog-info__members">
+            <div class="dialog-info__members-header">
+                <div class="dialog-info__members-header-left">
+                    <img src="assets/icons/group.svg" alt="group">
+                    <p>2 members</p>
+                </div>
+                <div class="dialog-info__members-header-right">
+                    <img class="icon" src="assets/icons/search.svg" alt="search">
+                </div>
+            </div>
+            <div class="dialog-info__members-list">
+                <div class="member member--online">
+                    <img class="member__avatar" src="assets/img/user1-avatar.png" alt="member1-avatar">
+                    <div class="member__info">
+                        <b>{{objects}}</b>
+                        <span>online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+
+    <script id="chat_info_type_group" type="text/x-handlebars-template">
+        <div class="dialog-info__header">
+            <b>Chat Info</b>
+            <img class="icon icon--small" src="assets/icons/close.svg" alt="close">
+        </div>
+        <div class="dialog-info__about">
+            <div class="about-top">
+                <img class="about-top__avatar"
+                    src="https://avatar.oxro.io/avatar.svg?name={{name}}"
+                    alt="group1-avatar" />
+                <div class="about-top__data">
+                    <b>{{name}}</b>
+                </div>
+            </div>
+            <hr>
+            <div class="about-description">
+                <img class="about-description__icon" src="assets/icons/info.svg" alt="info">
+                <p class="about-description__data">
+                    Be polite and respect each other.
+                </p>
+            </div>
+            <hr>
+            <div class="about-description">
+                <img class="about-description__icon" src="assets/icons/camera.svg" alt="info">
+                <p class="about-description__data">
+                    <label for="imageUpload" class="btn btn-primary btn-block btn-outlined">Set
+                        background</label>
+                    <input type="file" id="imageUpload" accept="image/*" style="display: none">
+                </p>
+            </div>
+
+
+            <hr>
+            <div class="about-notifications">
+                <div class="about-notifications__left">
+                    <img class="about-notifications__left-icon" src="assets/icons/notifications.svg"
+                        alt="notifications">
+                    <p class="about-notifications__left-data">
+                        Notifications
+                    </p>
+                </div>
+
+
+                <div class="about-notifications__right">
+                    <input id="checkbox1" type="checkbox" checked>
+                    <label for="checkbox1"></label>
+                </div>
+            </div>
+        </div>
+        <div class="dialog-info__attachments">
+            <div class="dialog-info__links">
+                <img class="dialog-info__links-icon" src="assets/icons/link.svg" alt="links">
+                <p class="dialog-info__links-text">0 shared link</p>
+            </div>
+        </div>
+
+
+        <div class="dialog-info__members">
+            <div class="dialog-info__members-header">
+                <div class="dialog-info__members-header-left">
+                    <img src="assets/icons/group.svg" alt="group">
+                    <p>{{member}} members</p>
+                </div>
+                <div class="dialog-info__members-header-right">
+                    <img class="icon" src="assets/icons/add-user.svg" alt="add">
+                    <img class="icon" src="assets/icons/search.svg" alt="search">
+                </div>
+            </div>
+            <div class="dialog-info__members-list">
+                {{#each objects}}
+                <div class="member member--online">
+                    <img class="member__avatar" src="https://avatar.oxro.io/avatar.svg?name={{name}}" alt="member1-avatar">
+                    <div class="member__info">
+                        
+                            <b>{{name}}</b>
+                            <!-- <span>online</span> -->
+                        
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emoji-button@2.2.2/dist/index.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://swiperjs.com/package/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.0.0/build/jwt-decode.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 1500,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    </script>
+
+    <script>
+        onTransitionStart: function () {
+            $(".swiper-slide div.title").hide();
+        },
+        onTransitionEnd: function (mySwiper) {
+            $("#title_" + mySwiper.activeIndex).show("slow");
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

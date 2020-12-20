@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <title>BUVAPE Chat</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.8/dist/css/uikit.min.css" /> --}}
+    {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"> --}}
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="background-color-blue"></div>
+    <div class="login-page">
+        <div class="top-login-page">
+            <a class="logo-top-page" href="#" targer="_blank">
+                <b class="icon-top-page"></b>
+                <!-- <i class = "icon-top-page-title"></i> -->
+                <span class="bv">BUVAPE</span>
+            </a>
+        </div>
+        <div class="login-form">
+            <div class="in-login">
+                <h3>Đăng nhập</h3>
+                <p class="p1">Vui lòng đăng nhập trước khi sử dụng hệ thống.</p>
+                <div class="label3">
+                    <select name="" class="select_pick" id="select_pick">
+                        <option class="pick" value="Phone">Phone</option>
+                        <option class="pick" value="Email">Email</option>
+                        <option class="pick" value="QRCODE">Mã QR</option>
+                    </select>
+                    <form id="login_email">
+                        <input class="email" type="email" name="email" value="" id="email" placeholder="Email" autofocus
+                            autocomplete="off">
+                        <input class="email" type="password" name="phone-number" id="password"
+                            placeholder="******" autocomplete="off"><br>
+                    </form>
+                    <form id="login_phone">
+                        <input class="email" type="text" name="phone" value="" id="phone" placeholder="Phone" autofocus
+                            autocomplete="off">
+                        <input class="email" type="password" name="phone-number" id="password_phone"
+                            placeholder="******" autocomplete="off"><br>
+                    </form>
+
+
+                    <a class="next-top-login-page" id="login" href="#">
+                        <span class="text-next-top-login-page">ĐĂNG NHẬP</span>
+                        <i class="icon-arrow-top-login-page"></i>
+                    </a>
+                    <p class="option_func"><span><a href="/forgot">Quên mật khẩu</a> | <a href="/signup">Đăng ký tài
+                                khoản</a></span></p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom-login-page">
+            <p class="introduction">Welcome to the official BUVAPE web-client.</p>
+            <a class="link-learn-more" href="https://web.telegram.org/#/login">Learn more</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

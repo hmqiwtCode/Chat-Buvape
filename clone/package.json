@@ -1,0 +1,28 @@
+{
+  "name": "clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e html,css,json,js,hbs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "handlebars-paginate": "^0.1.0",
+    "handlebars.moment": "^1.0.4",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "qrcode": "^1.4.4",
+    "socket.io": "^2.3.0",
+    "uuid": "^8.3.1"
+  }
+}
