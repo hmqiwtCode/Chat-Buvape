@@ -9,9 +9,30 @@ Mail Reg <br>
 Phone Reg <br>
 <img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/phonereg.PNG"><br>
 
-OTP Phone
+OTP Phone<br>
 <img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/otpphone.PNG"><br>
 
-Info Profile
+Info Profile<br>
 <img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/info.PNG"><br>
+
+Add friend<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/add_friend.PNG"><br>
+
+Create group<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/create_group.PNG"><br>
+
+Chat<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/chat.PNG"><br>
+
+Chat group<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/chat_group.PNG"><br>
+
+Create group<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/create_group.PNG"><br>
+
+Create group<br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/create_group.PNG"><br>
+
+
+
 
