@@ -61,7 +61,7 @@ Phone Reg<br>
 
 
 Scan Friend<br>
-<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/scan_user.PNG"><br>
+<img src="https://github.com/hmqiwtCode/Chat-Buvape/blob/master/imgs/scan_friend.PNG"><br>
 
 
 Scan login web like Zalo<br>
